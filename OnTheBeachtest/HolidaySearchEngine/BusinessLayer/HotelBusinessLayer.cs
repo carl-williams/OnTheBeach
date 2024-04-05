@@ -3,7 +3,7 @@ using HolidaySearchEngine.Models;
 
 namespace HolidaySearchEngine.BusinessLayer
 {
-     class HotelBusinessLayer : IHotelBusinessLayer
+     public class HotelBusinessLayer : IHotelBusinessLayer
     {
         private IDataLayer Datalayer;
 

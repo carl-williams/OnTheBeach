@@ -4,7 +4,7 @@ using HolidaySearchEngine.Models;
 
 namespace HolidaySearchEngine.BusinessLayer
 {
-    internal class FlightBusinessLayer : IFlightBusinessLayer
+    public class FlightBusinessLayer : IFlightBusinessLayer
     {
         private IDataLayer Datalayer;
 
