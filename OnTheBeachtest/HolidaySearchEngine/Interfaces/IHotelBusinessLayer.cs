@@ -6,6 +6,6 @@ namespace HolidaySearchEngine.Interfaces
     {
         IEnumerable<Hotel> GetAvaliableHotels(string localAirport, DateTime arrivalDate, int duration);
 
-        decimal GetTotalPriceForStayForHotel(Hotel hotek);
+        decimal GetTotalPriceForStayForHotel(Hotel hotel);
     }
 }

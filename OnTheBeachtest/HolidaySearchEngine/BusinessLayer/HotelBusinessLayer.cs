@@ -14,12 +14,15 @@ namespace HolidaySearchEngine.BusinessLayer
 
         IEnumerable<Hotel> IHotelBusinessLayer.GetAvaliableHotels(string localAirport, DateTime arrivalDate, int duration)
         {
-            throw new NotImplementedException();
+            return Datalayer.GetHotels()
+                .Where(h => h.Nights == duration)
+                .Where(h => h.ArrivalDate == arrivalDate)
+                .Where(h => h.LocalAirports.Contains(localAirport));
         }
 
-        decimal IHotelBusinessLayer.GetTotalPriceForStayForHotel(Hotel hotek)
+        decimal IHotelBusinessLayer.GetTotalPriceForStayForHotel(Hotel hotel)
         {
-            throw new NotImplementedException();
+            return hotel.PricePerNight * hotel.Nights;
         }
     }
 }
