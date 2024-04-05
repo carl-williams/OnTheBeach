@@ -19,10 +19,5 @@ namespace HolidaySearchEngine.BusinessLayer
                 .Where(h => h.ArrivalDate == arrivalDate)
                 .Where(h => h.LocalAirports.Contains(localAirport));
         }
-
-        decimal IHotelBusinessLayer.GetTotalPriceForStayForHotel(Hotel hotel)
-        {
-            return hotel.PricePerNight * hotel.Nights;
-        }
     }
 }

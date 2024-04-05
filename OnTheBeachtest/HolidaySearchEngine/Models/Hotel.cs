@@ -8,5 +8,7 @@
         public decimal PricePerNight { get; set; }
         public IEnumerable<string> LocalAirports  { get; set; }
         public int Nights { get; set; }
+
+        public decimal TotalPrice => PricePerNight * Nights;
     }
 }

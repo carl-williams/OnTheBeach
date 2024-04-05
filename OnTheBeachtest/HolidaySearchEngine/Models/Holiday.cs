@@ -4,7 +4,7 @@
     {
         public Flight Flight { get; }
         public Hotel Hotel { get; } 
-        public Decimal TotalCost => throw new NotImplementedException();
+        public Decimal TotalCost => Flight.Price + Hotel.TotalPrice;
 
         public Holiday(Flight flight, Hotel hotel)
         {

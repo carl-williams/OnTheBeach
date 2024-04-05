@@ -46,12 +46,14 @@ namespace HolidaySearchEngineTest.Tests
             };
             var holidays = HolidayBL.GetAvaliableHolidays(input);
 
-            Assert.That(holidays.Count, Is.EqualTo(1));
-            var holiday = holidays.First();
+            Assert.That(holidays.Count, Is.EqualTo(2));
+            var cheapest = holidays.First();
+            Assert.That(cheapest.Flight.Id, Is.EqualTo(6));
+            Assert.That(cheapest.Hotel.Id, Is.EqualTo(5));
 
-
-            Assert.That(holiday.Flight.Id, Is.EqualTo(6));
-            Assert.That(holiday.Hotel.Id, Is.EqualTo(5));
+            var expensive = holidays.Last();
+            Assert.That(expensive.Flight.Id, Is.EqualTo(6));
+            Assert.That(expensive.Hotel.Id, Is.EqualTo(13));
         }
 
         [Test]

@@ -34,7 +34,7 @@ namespace HolidaySearchEngineTest.Tests
                 .Where(h => h.Id == 4)
                 .FirstOrDefault();
             Assert.That(hotel, Is.Not.Null);
-            Assert.That(HotelBL.GetTotalPriceForStayForHotel(hotel), Is.EqualTo(826d));
+            Assert.That(hotel.TotalPrice, Is.EqualTo(826d));
         }
     }
 }

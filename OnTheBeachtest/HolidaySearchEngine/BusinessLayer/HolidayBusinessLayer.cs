@@ -16,11 +16,11 @@ namespace HolidaySearchEngineTest.BusinessLayer
 
         IEnumerable<Holiday> IHolidayBusinessLayer.GetAvaliableHolidays(HolidayParameters parameters)
         {
-            var hotels = HotelBL.GetAvaliableHotels(parameters.To, parameters.DepartureDate, parameters.Duration);
 
-            throw new NotImplementedException();
-
-
+            var flights = FlightBL.GetAvailableFlights(parameters.DepartureDate, parameters.From, parameters.To).ToList();
+            return HotelBL.GetAvaliableHotels(parameters.To, parameters.DepartureDate, parameters.Duration)
+                .SelectMany(h => flights.Select(f => new Holiday(f, h)))
+                .OrderBy(h => h.TotalCost);
         }
     }
 }

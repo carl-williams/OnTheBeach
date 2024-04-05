@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HolidaySearchEngineTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f96f84f9b776cd717f7edf522a4bbfb3e35069")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdfb700a0c826903fd2559b2b5fcfcbc037c7b28")]
 [assembly: System.Reflection.AssemblyProductAttribute("HolidaySearchEngineTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HolidaySearchEngineTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
