@@ -45,7 +45,7 @@ namespace HolidaySearchEngineTest.Tests
         {
             var flights = FlightBL.GetAvailableFlights(
                 new DateTime(2023, 6, 15),
-                ["MAN", "LYN"],
+                ["MAN", "LGW"],
                 "PMI"
             );
 

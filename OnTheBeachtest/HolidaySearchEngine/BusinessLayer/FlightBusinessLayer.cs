@@ -17,7 +17,15 @@ namespace HolidaySearchEngine.BusinessLayer
         {
             return Datalayer.GetFlights()
                 .Where(f => f.DepartureDate == departureDate)
-                .Where(f => f.From== from.FirstOrDefault() && f.To == to);
+                .Where(f =>
+                {
+                    if (!from.Any())
+                    {
+                        return true;
+                    }
+                    return from.Any(airport => airport == f.From);
+                })
+                .Where(f => f.To == to);
         }
     }
 }
