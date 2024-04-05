@@ -39,5 +39,35 @@ namespace HolidaySearchEngineTest.Tests
             Assert.That(flights.Any(f => f.Id == 10), Is.True);
             Assert.That(flights.Any(f => f.Id == 11), Is.True);
         }
+
+        [Test]
+        public void GetAllFlightsToPMIFor20230615DepartingFromManOrLgw()
+        {
+            var flights = FlightBL.GetAvailableFlights(
+                new DateTime(2023, 6, 15),
+                ["MAN", "LYN"],
+                "PMI"
+            );
+
+            Assert.That(flights.Count, Is.EqualTo(3));
+            Assert.That(flights.Any(f => f.Id == 3), Is.True);
+            Assert.That(flights.Any(f => f.Id == 5), Is.True);
+            Assert.That(flights.Any(f => f.Id == 6), Is.True);
+        }
+        [Test]
+        public void GetAllFlightsToPMIFor20230615()
+        {
+            var flights = FlightBL.GetAvailableFlights(
+                new DateTime(2023, 6, 15),
+                [],
+                "PMI"
+            );
+
+            Assert.That(flights.Count, Is.EqualTo(4));
+            Assert.That(flights.Any(f => f.Id == 3), Is.True);
+            Assert.That(flights.Any(f => f.Id == 4), Is.True);
+            Assert.That(flights.Any(f => f.Id == 5), Is.True);
+            Assert.That(flights.Any(f => f.Id == 6), Is.True);
+        }
     }
 }
