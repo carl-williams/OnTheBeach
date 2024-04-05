@@ -17,7 +17,7 @@ namespace HolidaySearchEngineTest.Tests
         [Test]
         public void TestCustomer1()
         {
-            var input = new HoldiayParameters
+            var input = new HolidayParameters
             {
                 DepartureDate = new DateTime(2023, 7, 1),
                 From = ["MAN"],
@@ -37,7 +37,7 @@ namespace HolidaySearchEngineTest.Tests
         [Test]
         public void TestCustomer2()
         {
-            var input = new HoldiayParameters
+            var input = new HolidayParameters
             {
                 DepartureDate = new DateTime(2023, 6, 15),
                 From = ["LCY", "LHR", "LGW", "STN", "SEN" ],
@@ -57,7 +57,7 @@ namespace HolidaySearchEngineTest.Tests
         [Test]
         public void TestCustomer3()
         {
-            var input = new HoldiayParameters
+            var input = new HolidayParameters
             {
                 DepartureDate = new DateTime(2022, 11, 10),
                 From = Enumerable.Empty<string>(),

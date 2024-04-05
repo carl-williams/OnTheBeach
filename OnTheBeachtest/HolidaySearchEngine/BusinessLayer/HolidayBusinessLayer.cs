@@ -5,9 +5,22 @@ namespace HolidaySearchEngineTest.BusinessLayer
 {
     public class HolidayBusinessLayer : IHolidayBusinessLayer
     {
-        IEnumerable<Holiday> IHolidayBusinessLayer.GetAvaliableHolidays(HoldiayParameters parameters)
+        private IHotelBusinessLayer HotelBL;
+        private IFlightBusinessLayer FlightBL;
+
+        public HolidayBusinessLayer(IHotelBusinessLayer hotelBL, IFlightBusinessLayer flightBL)
         {
+            HotelBL = hotelBL;
+            FlightBL = flightBL;
+        }
+
+        IEnumerable<Holiday> IHolidayBusinessLayer.GetAvaliableHolidays(HolidayParameters parameters)
+        {
+            var hotels = HotelBL.GetAvaliableHotels(parameters.To, parameters.DepartureDate, parameters.Duration);
+
             throw new NotImplementedException();
+
+
         }
     }
 }

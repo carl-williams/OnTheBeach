@@ -18,7 +18,7 @@ namespace HolidaySearchEngineTest.Tests
         {
             var flights = FlightBL.GetAvailableFlights(
                 new DateTime(2023, 7, 1),
-                "MAN",
+                ["MAN"],
                 "TFS"
             );
 
@@ -31,7 +31,7 @@ namespace HolidaySearchEngineTest.Tests
         {
             var flights = FlightBL.GetAvailableFlights(
                 new DateTime(2023, 7, 1),
-                "LGW",
+                ["LGW"],
                 "AGP"
             );
 

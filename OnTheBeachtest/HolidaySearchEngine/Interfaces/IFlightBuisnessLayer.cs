@@ -4,6 +4,6 @@ namespace HolidaySearchEngine.Interfaces
 {
     public interface IFlightBusinessLayer
     {
-        public IEnumerable<Flight> GetAvailableFlights(DateTime departureDate, string from, string to);
+        public IEnumerable<Flight> GetAvailableFlights(DateTime departureDate, IEnumerable<string> from, string to);
     }
 }

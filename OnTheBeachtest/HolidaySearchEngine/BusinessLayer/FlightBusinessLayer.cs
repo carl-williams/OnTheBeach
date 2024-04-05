@@ -13,11 +13,11 @@ namespace HolidaySearchEngine.BusinessLayer
             Datalayer = dataLayer;
         }
 
-        IEnumerable<Flight> IFlightBusinessLayer.GetAvailableFlights(DateTime departureDate, string from, string to)
+        IEnumerable<Flight> IFlightBusinessLayer.GetAvailableFlights(DateTime departureDate, IEnumerable<string> from, string to)
         {
             return Datalayer.GetFlights()
                 .Where(f => f.DepartureDate == departureDate)
-                .Where(f => f.From == from && f.To == to);
+                .Where(f => f.From== from.FirstOrDefault() && f.To == to);
         }
     }
 }

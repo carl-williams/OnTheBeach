@@ -4,6 +4,6 @@ namespace HolidaySearchEngine.Interfaces
 {
     public interface IHolidayBusinessLayer
     {
-        IEnumerable<Holiday> GetAvaliableHolidays(HoldiayParameters parameters);
+        IEnumerable<Holiday> GetAvaliableHolidays(HolidayParameters parameters);
     }
 }
