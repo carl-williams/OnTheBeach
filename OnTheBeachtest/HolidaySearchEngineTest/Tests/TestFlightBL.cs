@@ -36,8 +36,8 @@ namespace HolidaySearchEngineTest.Tests
             );
 
             Assert.That(flights.Count, Is.EqualTo(2));
+            Assert.That(flights.Any(f => f.Id == 10), Is.True);
             Assert.That(flights.Any(f => f.Id == 11), Is.True);
-            Assert.That(flights.Any(f => f.Id == 12), Is.True);
         }
     }
 }

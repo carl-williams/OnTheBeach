@@ -15,7 +15,9 @@ namespace HolidaySearchEngine.BusinessLayer
 
         IEnumerable<Flight> IFlightBusinessLayer.GetAvailableFlights(DateTime departureDate, string from, string to)
         {
-            throw new NotImplementedException();
+            return Datalayer.GetFlights()
+                .Where(f => f.DepartureDate == departureDate)
+                .Where(f => f.From == from && f.To == to);
         }
     }
 }
